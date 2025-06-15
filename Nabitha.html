@@ -22,6 +22,8 @@
             padding: 100px 20px;
             position: relative; /* Needed for video overlay */
             overflow: hidden; /* For background video if used */
+            /* Added padding-top to make space for logo */
+            padding-top: 50px; /* Adjust as needed */
         }
         /* Example for background video (uncomment and replace src) */
         /* .hero-section video {
@@ -36,6 +38,18 @@
             transform: translate(-50%, -50%);
             background-size: cover;
         } */
+        .logo-container {
+            margin-bottom: 20px; /* Space between logo and headline */
+            /* Add more styling here if you want to control logo size/position */
+        }
+        .logo-container img {
+            max-width: 150px; /* Adjust logo size as needed */
+            height: auto;
+            display: block; /* Ensures margin auto works for centering */
+            margin: 0 auto; /* Center the logo */
+            border-radius: 5px; /* Optional: subtle rounding */
+            /* You might want a slight shadow or border depending on the logo design */
+        }
         .hero-content {
             z-index: 1;
             position: relative;
@@ -286,50 +300,29 @@
             font-weight: normal;
         }
 
-        /* --- Contact Form Styling --- */
-        #contact form {
-            background-color: #f8fcfd;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            max-width: 600px;
-            margin: 30px auto;
+        /* --- Contact Section (now without direct form) --- */
+        #contact {
+            text-align: center; /* Center the content */
         }
-        #contact form label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
+        #contact .cta-button { /* Reusing existing CTA button style for consistency */
+            margin-top: 20px; /* Space below intro text */
+            margin-bottom: 40px; /* Space above other contact methods */
         }
-        #contact form input[type="text"],
-        #contact form input[type="email"],
-        #contact form select,
-        #contact form textarea {
-            width: calc(100% - 24px); /* Account for padding */
-            padding: 12px;
-            margin-top: 6px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 1em;
+        #contact ul {
+            display: inline-block; /* To center the ul itself */
+            text-align: left; /* Keep list items left aligned */
+            list-style: none; /* Remove default bullets */
+            padding: 0;
+            margin-top: 20px;
         }
-        #contact form textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        #contact form input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        #contact ul li {
+            margin-bottom: 10px;
             font-size: 1.1em;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
         }
-        #contact form input[type="submit"]:hover {
-            background-color: #0056b3;
+        #contact ul li strong {
+            color: #0056b3;
         }
+
 
         /* --- Footer Styling --- */
         footer {
@@ -376,10 +369,13 @@
 <body>
 
     <section class="hero-section">
+        <div class="logo-container">
+            <img src="path/to/your/logo.png" alt="Nabitha Company Logo">
+        </div>
         <div class="hero-content">
             <h1>Nabitha: Effortless Connections. Exceptional Results.</h1>
             <p>We link your needs with the perfect professionals & resources, making your projects happen seamlessly.</p>
-            <a href="#contact" class="hero-cta">Submit Your Requirement Now!</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="hero-cta">Submit Your Requirement Now!</a>
         </div>
     </section>
 
@@ -445,7 +441,7 @@
                     </ul>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px;"><a href="#contact" class="cta-button"><strong>Share Your Requirement With Us Today!</strong></a></p>
+            <p style="text-align: center; margin-top: 40px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button"><strong>Share Your Requirement With Us Today!</strong></a></p>
         </section>
 
         <section id="how-it-works">
@@ -458,7 +454,7 @@
                     <h3>Share Your Requirement</h3>
                     <p>Tell us exactly what you need. Be as detailed as possible about the service, skill, or specific task.
                         <br><em>(E.g., nature of task, desired outcome, timeframe.)</em></p>
-                    <p><a href="#contact" class="cta-button">Submit Your Need</a></p>
+                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button">Submit Your Need</a></p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
@@ -473,7 +469,7 @@
                     <p><em>(The result: Requirements met, tasks successfully completed!)</em></p>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px;"><a href="#contact" class="cta-button"><strong>Begin Your Journey Here</strong></a></p>
+            <p style="text-align: center; margin-top: 40px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button"><strong>Begin Your Journey Here</strong></a></p>
         </section>
 
         <section id="testimonials">
@@ -502,42 +498,19 @@
 
         <section id="contact">
             <h2>Submit Your Requirement</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Ready to get started? Tell us what you need, and we'll begin the process of connecting you with the right professionals and resources.</p>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Ready to get started? Click the button below to share your needs with us via our secure form, and we'll begin connecting you with the right professionals and resources.</p>
 
-            <h3>Tell Us About Your Needs:</h3>
-            <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST">
-                <p>
-                    <label for="name">Your Name:</label><br>
-                    <input type="text" id="name" name="user_name" required placeholder="John Doe">
-                </p>
-                <p>
-                    <label for="email">Your Email:</label><br>
-                    <input type="email" id="email" name="user_email" required placeholder="john.doe@example.com">
-                </p>
-                <p>
-                    <label for="requirement_type">Type of Requirement:</label><br>
-                    <select id="requirement_type" name="requirement_type">
-                        <option value="">-- Please Select --</option>
-                        <option value="service">Service</option>
-                        <option value="skill">Skill</option>
-                        <option value="custom">Specific/Custom Requirement</option>
-                        <option value="other">Other</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="details">Please describe your requirement in detail:</label><br>
-                    <textarea id="details" name="requirement_details" rows="8" required placeholder="I need a freelance graphic designer for a new company logo and branding guidelines..."></textarea>
-                </p>
-                <p>
-                    <input type="submit" value="Submit My Requirement">
-                </p>
-            </form>
+            <p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button">
+                    <strong>Go to Submission Form</strong>
+                </a>
+            </p>
 
             <h3>Other Ways to Connect:</h3>
             <p style="text-align: center;">If you prefer, you can also reach out to us via:</p>
-            <ul style="list-style: none; padding: 0; text-align: center;">
-                <li style="margin-bottom: 10px;"><strong>Email:</strong> <a href="mailto:info@nabitha.com">info@nabitha.com</a></li>
-                <li style="margin-bottom: 10px;"><strong>Phone:</strong> [Your Phone Number Here] (Optional - replace or remove)</li>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:info@nabitha.com">info@nabitha.com</a> (Replace with your actual email)</li>
+                <li><strong>Phone:</strong> [Your Phone Number Here] (Optional - replace or remove)</li>
                 <li><strong>Connect on LinkedIn:</strong> <a href="https://www.linkedin.com/company/105528332/" target="_blank">Nabitha LinkedIn Page</a></li>
             </ul>
         </section>
