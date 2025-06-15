@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nabitha: Your Partner in Getting Things Done - Solutions for Every Need</title>
+    <!-- Basic CSS for demonstration. For a real site, link to an external stylesheet (style.css) -->
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,25 +23,10 @@
             padding: 100px 20px;
             position: relative; /* Needed for video overlay */
             overflow: hidden; /* For background video if used */
-            /* Added padding-top to make space for logo */
             padding-top: 50px; /* Adjust as needed */
         }
-        /* Example for background video (uncomment and replace src) */
-        /* .hero-section video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            transform: translate(-50%, -50%);
-            background-size: cover;
-        } */
         .logo-container {
             margin-bottom: 20px; /* Space between logo and headline */
-            /* Add more styling here if you want to control logo size/position */
         }
         .logo-container img {
             max-width: 150px; /* Adjust logo size as needed */
@@ -48,7 +34,6 @@
             display: block; /* Ensures margin auto works for centering */
             margin: 0 auto; /* Center the logo */
             border-radius: 5px; /* Optional: subtle rounding */
-            /* You might want a slight shadow or border depending on the logo design */
         }
         .hero-content {
             z-index: 1;
@@ -300,14 +285,24 @@
             font-weight: normal;
         }
 
-        /* --- Contact Section (now without direct form) --- */
+        /* --- Contact Section with Embedded Form --- */
         #contact {
-            text-align: center; /* Center the content */
+            text-align: center;
         }
-        #contact .cta-button { /* Reusing existing CTA button style for consistency */
-            margin-top: 20px; /* Space below intro text */
-            margin-bottom: 40px; /* Space above other contact methods */
+        .google-form-container {
+            max-width: 800px; /* Adjust max width of the form */
+            margin: 40px auto;
+            border-radius: 10px;
+            overflow: hidden; /* Ensures iframe corners are rounded */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Adds depth to the form */
         }
+        .google-form-container iframe {
+            width: 100%;
+            height: 1200px; /* Adjust height based on your form's length */
+            border: none;
+            display: block; /* Removes extra space below iframe */
+        }
+
         #contact ul {
             display: inline-block; /* To center the ul itself */
             text-align: left; /* Keep list items left aligned */
@@ -322,7 +317,6 @@
         #contact ul li strong {
             color: #0056b3;
         }
-
 
         /* --- Footer Styling --- */
         footer {
@@ -349,7 +343,7 @@
             .hero-content p {
                 font-size: 1em;
             }
-            .main {
+            main {
                 padding: 20px;
             }
             h2 {
@@ -363,23 +357,29 @@
                 width: 90%;
                 margin: 15px 0;
             }
+            .google-form-container iframe {
+                height: 1000px; /* Adjust for smaller screens if needed */
+            }
         }
     </style>
-    </head>
+</head>
 <body>
 
+    <!-- HERO SECTION - Striking First Impression -->
     <section class="hero-section">
         <div class="logo-container">
-            <img src="Gemini_Generated_Image_vcrwuivcrwuivcrw.png" alt="Nabitha Company Logo">
+            <img src="Gemini_Generated_Image_vcrwuivcrwuivcrw.jpg" alt="Nabitha Company Logo">
         </div>
         <div class="hero-content">
             <h1>Nabitha: Effortless Connections. Exceptional Results.</h1>
             <p>We link your needs with the perfect professionals & resources, making your projects happen seamlessly.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="hero-cta">Submit Your Requirement Now!</a>
+            <!-- This button will now scroll to the embedded form -->
+            <a href="#contact" class="hero-cta">Submit Your Requirement Now!</a>
         </div>
     </section>
 
     <main>
+        <!-- INTRODUCTION & WHY CHOOSE US - Enhanced with Icons -->
         <section id="introduction">
             <h2>Need help getting things done? We're here for you!</h2>
             <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">At Nabitha, we understand that finding the right person or resource for a task can be challenging. That's why we've built a dedicated network to bridge that gap. Whether it’s a specific <strong>service</strong>, a specialized <strong>skill</strong>, or a unique <strong>requirement</strong> — we’re committed to helping people connect with the right professionals and resources to achieve their goals.</p>
@@ -388,31 +388,37 @@
             <h3>Why Choose Nabitha?</h3>
             <div class="icon-list">
                 <div class="icon-item">
-                    <div class="icon">&#129309;</div> <h4>Dedicated Support</h4>
+                    <div class="icon">&#129309;</div> <!-- Handshake icon -->
+                    <h4>Dedicated Support</h4>
                     <p>We're committed to understanding your needs and finding the perfect match.</p>
                 </div>
                 <div class="icon-item">
-                    <div class="icon">&#127760;</div> <h4>Vast Network</h4>
+                    <div class="icon">&#127760;</div> <!-- Globe/Network icon -->
+                    <h4>Vast Network</h4>
                     <p>Gain access to a wide range of vetted professionals and valuable resources.</p>
                 </div>
                 <div class="icon-item">
-                    <div class="icon">&#9889;</div> <h4>Effortless Connection</h4>
+                    <div class="icon">&#9889;</div> <!-- Lightning bolt/Efficiency icon -->
+                    <h4>Effortless Connection</h4>
                     <p>We simplify the process, saving you significant time and effort.</p>
                 </div>
                 <div class="icon-item">
-                    <div class="icon">&#128100;</div> <h4>Community Focused</h4>
+                    <div class="icon">&#128100;</div> <!-- Group of people/Community icon -->
+                    <h4>Community Focused</h4>
                     <p>Fostering strong connections and collaborative spirit within our network.</p>
                 </div>
             </div>
         </section>
 
+        <!-- SERVICES & EXPERTISE - With a Grid/Card Layout -->
         <section id="services">
             <h2>Our Services & Expertise</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Nabitha is your go-to platform for finding the exact support you need. Our expansive network encompasses a broad spectrum of capabilities, designed to cater to diverse demands. We simplify the search, ensuring you connect with reliable and skilled individuals or teams.</p>
 
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="icon">&#128187;</div> <h4>Professional Services</h4>
+                    <div class="icon">&#128187;</div> <!-- Laptop/Professional icon -->
+                    <h4>Professional Services</h4>
                     <ul>
                         <li>Administrative Support</li>
                         <li>Marketing & Sales</li>
@@ -422,7 +428,8 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="icon">&#128220;</div> <h4>Specialized Skills</h4>
+                    <div class="icon">&#128220;</div> <!-- Scroll/Skill icon -->
+                    <h4>Specialized Skills</h4>
                     <ul>
                         <li>Creative Design</li>
                         <li>Content & Copywriting</li>
@@ -432,7 +439,8 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <div class="icon">&#129505;</div> <h4>Custom & Specific Requirements</h4>
+                    <div class="icon">&#129505;</div> <!-- Puzzle piece/Custom icon -->
+                    <h4>Custom & Specific Requirements</h4>
                     <p>Tell us exactly what you need, no matter how specialized, and we'll find the perfect fit.</p>
                     <ul style="list-style: none; padding: 0;">
                         <li>&#10003; Niche Expertise</li>
@@ -441,9 +449,11 @@
                     </ul>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button"><strong>Share Your Requirement With Us Today!</strong></a></p>
+            <!-- This button will now scroll to the embedded form -->
+            <p style="text-align: center; margin-top: 40px;"><a href="#contact" class="cta-button"><strong>Share Your Requirement With Us Today!</strong></a></p>
         </section>
 
+        <!-- HOW IT WORKS - Visual Steps -->
         <section id="how-it-works">
             <h2>How Nabitha Works</h2>
             <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Our simple process to connect you with the right support. At Nabitha, we've streamlined the process of finding the help you need.</p>
@@ -454,7 +464,8 @@
                     <h3>Share Your Requirement</h3>
                     <p>Tell us exactly what you need. Be as detailed as possible about the service, skill, or specific task.
                         <br><em>(E.g., nature of task, desired outcome, timeframe.)</em></p>
-                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button">Submit Your Need</a></p>
+                    <!-- This button will now scroll to the embedded form -->
+                    <p><a href="#contact" class="cta-button">Submit Your Need</a></p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
@@ -469,9 +480,11 @@
                     <p><em>(The result: Requirements met, tasks successfully completed!)</em></p>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button"><strong>Begin Your Journey Here</strong></a></p>
+            <!-- This button will now scroll to the embedded form -->
+            <p style="text-align: center; margin-top: 40px;"><a href="#contact" class="cta-button"><strong>Begin Your Journey Here</strong></a></p>
         </section>
 
+        <!-- TESTIMONIALS - Social Proof -->
         <section id="testimonials">
             <h2>What Our Clients Say</h2>
             <div class="testimonials-grid">
@@ -496,21 +509,24 @@
             </div>
         </section>
 
+        <!-- CONTACT / EMBEDDED GOOGLE FORM -->
         <section id="contact">
             <h2>Submit Your Requirement</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Ready to get started? Click the button below to share your needs with us via our secure form, and we'll begin connecting you with the right professionals and resources.</p>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">Ready to get started? Fill out the secure form below to share your needs with us, and we'll begin connecting you with the right professionals and resources.</p>
 
-            <p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?usp=header" target="_blank" class="cta-button">
-                    <strong>Go to Submission Form</strong>
-                </a>
-            </p>
+            <div class="google-form-container">
+                <!-- IMPORTANT: This iframe embeds your Google Form directly -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdyfyb2v02w28KVHvwr1nFTknIT4dzzoeZNHW0dd4FQ13CuGg/viewform?embedded=true"
+                        width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">
+                    Loading…
+                </iframe>
+            </div>
 
             <h3>Other Ways to Connect:</h3>
             <p style="text-align: center;">If you prefer, you can also reach out to us via:</p>
             <ul>
-                <!--<li><strong>Email:</strong> <a href="mailto:info@nabitha.com">info@nabitha.com</a> (Replace with your actual email)</li> -->
-                <!--<li><strong>Phone:</strong> </li>-->
+                <li><strong>Email:</strong> <a href="mailto:info@nabitha.com">info@nabitha.com</a> (Replace with your actual email)</li>
+                <li><strong>Phone:</strong> [Your Phone Number Here] (Optional - replace or remove)</li>
                 <li><strong>Connect on LinkedIn:</strong> <a href="https://www.linkedin.com/company/105528332/" target="_blank">Nabitha LinkedIn Page</a></li>
             </ul>
         </section>
@@ -518,8 +534,20 @@
 
     <footer>
         <p>&copy; 2025 Nabitha. All rights reserved.</p>
-         <!--<p>#SupportNetwork #HelpingHands #WorkConnections #Collaboration #CommunitySupport</p>-->
+        <p>#SupportNetwork #HelpingHands #WorkConnections #Collaboration #CommunitySupport</p>
     </footer>
 
-    </body>
+    <!-- Optional: Smooth scrolling JavaScript -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
 </html>
